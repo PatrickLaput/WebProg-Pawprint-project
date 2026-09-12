@@ -1,0 +1,743 @@
+:root{
+    --background-color: #fcf5eb;
+    --background-color2: #fcf0e1;
+    --primary-color: #e36637;
+    --primary-color2: #4a301b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+.site-header {
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 10px 5%;
+}
+
+.nav {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 410px;
+    height: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav-links a {
+    position: relative;
+    font-family: "fredoka";
+    font-size: 24px;
+    font-weight: 610;
+    color: var(--primary-color2);
+    text-decoration: none;
+    padding: 2px 7;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 43px;
+}
+
+.nav-icons a {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.nav-icons img {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-icons a:hover {
+    transform: translateY(-2px);
+}
+
+/* body */
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--primary-color2);
+
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* ========================================
+   ACCOUNT PAGE
+======================================== */
+
+.account-page {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: var(--background-color);
+
+    padding: 15px 3.2% 30px;
+}
+
+
+.account-container {
+    width: 100%;
+    max-width: 1400px;
+
+    min-height: calc(100vh - 45px);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 330px 1fr;
+
+    gap: 30px;
+}
+
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.account-sidebar {
+    min-height: 100%;
+
+    padding: 15px 15px 10px;
+
+    background-color: #faf7f1;
+
+    border-radius: 7px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 2px 15px rgba(74, 48, 27, 0.025);
+}
+
+
+/* ========================================
+   SIDEBAR PROFILE
+======================================== */
+
+.sidebar-profile {
+    text-align: center;
+
+    padding: 0 0 20px;
+}
+
+
+.sidebar-profile-image {
+    width: 94px;
+    height: 94px;
+
+    margin: 0 auto 10px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+
+.sidebar-profile-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.sidebar-profile h3 {
+    margin: 0 0 3px;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    color: var(--primary-color2);
+}
+
+
+.sidebar-profile p {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+
+    color: var(--text-light);
+}
+
+
+/* ========================================
+   SIDEBAR NAVIGATION
+======================================== */
+
+.account-navigation {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.account-nav-item {
+    width: 100%;
+    height: 43px;
+
+    padding: 0 14px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+
+    color: #5f5852;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.account-nav-item:hover {
+    background-color: var(--background-color2);
+    color: var(--primary-color);
+}
+
+.account-nav-item.active {
+    background-color: #fbe9d9;
+
+    color: var(--primary-color);
+
+    font-weight: 600;
+
+    border-left: 3px solid var(--primary-color);
+}
+
+
+.nav-icon {
+    width: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    color: currentColor;
+}
+
+/* ========================================
+   MAIN CONTENT
+======================================== */
+
+.account-main {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 5px 0 40px;
+}
+
+
+/* ========================================
+   DECORATIVE PAW
+======================================== */
+
+.account-paw {
+    position: absolute;
+
+    top: 5px;
+    right: 5px;
+
+    width: 70px;
+    height: 70px;
+
+    object-fit: contain;
+
+    opacity: 0.35;
+
+    transform: rotate(10deg);
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   ACCOUNT HEADING
+======================================== */
+
+.account-heading {
+    margin: 5px 0 10px 10px;
+}
+
+
+.account-heading h1 {
+    margin: 0 0 5px;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    color: var(--primary-color2);
+}
+
+
+.account-heading p {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    line-height: 1.45;
+
+    color: var(--text-light);
+}
+
+
+/* ========================================
+   ACCOUNT CARD
+======================================== */
+
+.account-card {
+    width: 100%;
+
+    padding: 20px 20px 25px;
+
+    background-color: #fffdf9;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 7px;
+
+    box-shadow: 0 3px 15px rgba(74, 48, 27, 0.025);
+}
+
+
+/* ========================================
+   USER HEADER
+======================================== */
+
+.account-user-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.account-user-left {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.account-profile-image {
+    position: relative;
+
+    width: 65px;
+    height: 65px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    overflow: visible;
+}
+
+
+.account-profile-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+}
+
+
+.account-user-info h2 {
+    margin: 0 0 2px;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    color: var(--primary-color2);
+}
+
+
+.account-user-info p {
+    margin: 0 0 7px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+
+    color: var(--text-light);
+}
+
+
+/* ========================================
+   EDIT PROFILE BUTTON
+======================================== */
+
+.edit-profile-button {
+    min-width: 84px;
+    height: 30px;
+
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: 1px solid var(--primary-color);
+
+    border-radius: 5px;
+
+    background-color: transparent;
+
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    color: var(--primary-color);
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.edit-profile-button span {
+    font-size: 11px;
+}
+
+
+.edit-profile-button:hover {
+    background-color: var(--primary-color);
+
+    color: white;
+}
+
+
+/* ========================================
+   DIVIDER
+======================================== */
+
+.account-divider {
+    width: 100%;
+
+    height: 1px;
+
+    margin: 15px 0 15px;
+
+    background-color: var(--border-color);
+}
+
+
+/* ========================================
+   PERSONAL INFORMATION
+======================================== */
+
+.personal-information h3 {
+    margin: 0 0 15px;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    color: var(--primary-color2);
+}
+
+
+.information-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 80px;
+
+    row-gap: 18px;
+}
+
+
+.information-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.information-label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--text-light);
+}
+
+
+.information-value {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+
+    color: var(--primary-color2);
+}
+
+
+
+
+/* footer */
+.footer {
+    position: relative;
+    width: 100%;
+    min-height: 325px;
+    padding: 35px 6% 40px;
+    background-color: var(--primary-color2);
+    overflow: hidden;
+}
+
+.footer-container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1.5fr;
+    column-gap: 70px;
+    z-index: 2;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    width: 305px;
+    height: auto;
+    margin-bottom: 30px;
+    object-fit: contain;
+}
+.footer-brand p {
+    margin: 0 0 20px;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #FFFFFF;
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.footer-socials a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #FFFFFF;
+    border-radius: 50%;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.footer-socials a:hover {
+    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-socials img {
+    width: 19px;
+    height: 19px;
+    object-fit: contain;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-column h3,
+.footer-newsletter h3 {
+    margin: 13px 0 30px;
+    font-family: "Fredoka";
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.footer-column a {
+    margin-bottom: 17px;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: var(--primary-color);
+    transform: translateX(3px);
+}
+
+.footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-newsletter h3 {
+    margin-bottom: 30px;
+}
+
+.footer-newsletter p {
+    margin: 0 0 25px;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #FFFFFF;
+}
+
+.subscribe-form {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.subscribe-form input {
+    flex: 1;
+    min-width: 0;
+    height: 40px;
+    padding: 0 12px;
+    border: none;
+    outline: none;
+    background-color: #FFFFFF;
+    font-family: "Montserrat";
+    font-size: 16px;
+    color: var(--primary-color2);
+}
+
+.subscribe-form input::placeholder {
+    color: #8A817C;
+}
+
+.subscribe-form button {
+    width: 135px;
+    height: 40px;
+    border: none;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.subscribe-form button:hover {
+    background-color: #D9652C;
+}
+
+.footer-paw {
+    position: absolute;
+    width: 95px;
+    height: auto;
+    right: 25px;
+    top: 30px;
+    opacity: 0.65;
+    object-fit: contain;
+    z-index: 1;
+}

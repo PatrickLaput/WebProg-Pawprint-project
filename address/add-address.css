@@ -1,0 +1,372 @@
+:root{
+    --background-color: #fcf5eb;
+    --background-color2: #fefbf7;
+    --primary-color: #e36637;
+    --primary-color2: #4a301b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+.site-header {
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 10px 5%;
+}
+
+.nav {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 410px;
+    height: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav-links a {
+    position: relative;
+    font-family: "fredoka";
+    font-size: 24px;
+    font-weight: 610;
+    color: var(--primary-color2);
+    text-decoration: none;
+    padding: 2px 7;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 43px;
+}
+
+.nav-icons a {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.nav-icons img {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-icons a:hover {
+    transform: translateY(-2px);
+}
+
+
+
+.add-address-page {
+    min-height: calc(100vh - 100px);
+    padding: 55px 6% 80px;
+    background-color: var(--background-color);
+}
+
+.add-address-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* HEADER */
+
+.add-address-header {
+    margin-bottom: 30px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--primary-color2);
+    text-decoration: none;
+
+    transition: color .2s ease;
+}
+
+.back-link:hover {
+    color: var(--primary-color);
+}
+
+.add-address-header h1 {
+    margin: 0 0 8px;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+
+    color: var(--primary-color2);
+}
+
+.add-address-header p {
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+
+    color: var(--text-light);
+}
+
+
+/* FORM CARD */
+
+.address-form-card {
+    width: 100%;
+
+    padding: 35px 40px;
+
+    background-color: #ffffff;
+
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+
+/* ERROR */
+
+.form-error {
+    margin-bottom: 25px;
+    padding: 12px 15px;
+
+    background-color: #fff0eb;
+
+    border: 1px solid #e36637;
+    border-radius: 6px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #c84f27;
+}
+
+
+/* FORM */
+
+.address-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--primary-color2);
+}
+
+.form-group input {
+    width: 100%;
+    height: 45px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+
+    outline: none;
+
+    background-color: #fff;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+
+    color: var(--primary-color2);
+
+    transition: border-color .2s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+}
+
+.form-group input::placeholder {
+    color: #9a918b;
+}
+
+
+/* TWO COLUMNS */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* DEFAULT ADDRESS */
+
+.default-option {
+    margin-top: 5px;
+    padding: 18px;
+
+    background-color: var(--background-color2);
+
+    border-radius: 8px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    cursor: pointer;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--primary-color2);
+}
+
+.checkbox-label input {
+    width: 17px;
+    height: 17px;
+
+    accent-color: var(--primary-color);
+
+    cursor: pointer;
+}
+
+.default-option small {
+    display: block;
+
+    margin-top: 8px;
+    margin-left: 27px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+
+    color: var(--text-light);
+}
+
+
+/* BUTTONS */
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid var(--border-color);
+}
+
+.cancel-btn,
+.save-btn {
+    min-width: 130px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.cancel-btn {
+    border: 1px solid var(--border-color);
+
+    background-color: white;
+
+    color: var(--primary-color2);
+}
+
+.cancel-btn:hover {
+    background-color: var(--background-color2);
+}
+
+.save-btn {
+    border: none;
+
+    background-color: var(--primary-color);
+
+    color: white;
+
+    transition: background-color .2s ease,
+                transform .2s ease;
+}
+
+.save-btn:hover {
+    background-color: #d65c30;
+    transform: translateY(-1px);
+}
