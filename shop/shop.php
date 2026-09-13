@@ -701,35 +701,43 @@ function filter_url($page_number, $sort)
                                     $product_image_url = "../" . ltrim($product["image"], "/");
                                     ?>
 
-                                    <div class="product-image">
+                                    <a
+                                        href="product-details.php?id=<?= (int)$product['prod_id'] ?>"
+                                        class="product-image-link"
+                                    >
+                                        <div class="product-image">
+                                            <?php if (
+                                                !empty($product["image"]) &&
+                                                file_exists($product_image_path)
+                                            ): ?>
 
-                                        <?php if (
-                                            !empty($product["image"]) &&
-                                            file_exists($product_image_path)
-                                        ): ?>
+                                                <img
+                                                    src="<?php echo htmlspecialchars($product_image_url); ?>"
+                                                    alt="<?php echo htmlspecialchars($product["name"]); ?>"
+                                                >
 
-                                            <img
-                                                src="<?php echo htmlspecialchars($product_image_url); ?>"
-                                                alt="<?php echo htmlspecialchars($product["name"]); ?>"
-                                            >
+                                            <?php else: ?>
 
-                                        <?php else: ?>
+                                                <img
+                                                    src="../images/petfood.png"
+                                                    alt="Product image"
+                                                >
 
-                                            <img
-                                                src="../images/petfood.png"
-                                                alt="Product image"
-                                            >
-
-                                        <?php endif; ?>
-
-                                    </div>
+                                            <?php endif; ?>
+                                        </div>
+                                    </a>
 
                                     <!-- DETAILS -->
 
                                     <div class="product-details">
 
                                         <h3>
-                                            <?php echo htmlspecialchars($product["name"]); ?>
+                                            <a
+                                                href="product-details.php?id=<?= (int)$product['prod_id'] ?>"
+                                                class="product-name-link"
+                                            >
+                                                <?php echo htmlspecialchars($product["name"]); ?>
+                                            </a>
                                         </h3>
 
 

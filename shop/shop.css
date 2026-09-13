@@ -682,6 +682,21 @@ body {
    PRODUCT IMAGE
 ======================================== */
 
+.product-image-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-name-link {
+    color: var(--primary-color2);
+    text-decoration: none;
+}
+
+.product-name-link:hover {
+    color: var(--primary-color);
+}
+
 .product-image {
     width: 100%;
 

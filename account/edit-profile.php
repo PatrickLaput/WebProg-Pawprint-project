@@ -128,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
                 $upload_directory =
-                    "uploads/profiles/";
+                    "../uploads/profiles/";
 
                 $upload_path =
                     $upload_directory .
