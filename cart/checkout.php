@@ -215,18 +215,21 @@ $stmt->close();
 
                                     <div class="checkout-item-image">
 
-                                        <?php if (!empty($item["image"])): ?>
+                                        <?php
+                                        if (
+                                            !empty($item["image"]) &&
+                                            file_exists(__DIR__ . "/../" . ltrim($item["image"], "/"))
+                                        ) {
+                                            $checkout_image = "../" . ltrim($item["image"], "/");
+                                        } else {
+                                            $checkout_image = "../images/petfood.png";
+                                        }
+                                        ?>
 
-                                            <img
-                                                src="<?php echo htmlspecialchars($item["image"]); ?>"
-                                                alt="<?php echo htmlspecialchars($item["name"]); ?>"
-                                            >
-
-                                        <?php else: ?>
-
-                                            <span>🐾</span>
-
-                                        <?php endif; ?>
+                                        <img
+                                            src="<?php echo htmlspecialchars($checkout_image); ?>"
+                                            alt="<?php echo htmlspecialchars($item["name"]); ?>"
+                                        >
 
                                     </div>
 

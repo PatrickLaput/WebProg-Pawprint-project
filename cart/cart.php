@@ -173,33 +173,20 @@ foreach ($cart_items as $item) {
                             <div class="cart-product-image">
 
                                 <?php
-
-                                $image_path =
-                                    !empty($item["image"])
-                                    ? $item["image"]
-                                    : "";
-
+                                if (
+                                    !empty($item["image"]) &&
+                                    file_exists(__DIR__ . "/../" . ltrim($item["image"], "/"))
+                                ) {
+                                    $cart_image = "../" . ltrim($item["image"], "/");
+                                } else {
+                                    $cart_image = "../images/petfood.png";
+                                }
                                 ?>
 
-                                <?php if (
-                                    $image_path !== "" &&
-                                    file_exists($image_path)
-                                ): ?>
-
-                                    <img
-                                        src="<?php echo htmlspecialchars($image_path); ?>"
-                                        alt="<?php echo htmlspecialchars($item["name"]); ?>"
-                                    >
-
-                                <?php else: ?>
-
-                                    <div class="cart-placeholder">
-
-                                        <span>🐾</span>
-
-                                    </div>
-
-                                <?php endif; ?>
+                                <img
+                                    src="<?php echo htmlspecialchars($cart_image); ?>"
+                                    alt="<?php echo htmlspecialchars($item["name"]); ?>"
+                                >
 
                             </div>
 

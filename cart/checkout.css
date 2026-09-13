@@ -220,7 +220,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--background-color2);
     border-radius: 8px;
     overflow: hidden;
 }

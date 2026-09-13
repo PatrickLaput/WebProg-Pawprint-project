@@ -219,8 +219,6 @@
     overflow: hidden;
 
     border-radius: 10px;
-
-    background-color: var(--background-color2);
 }
 
 .cart-product-image img {

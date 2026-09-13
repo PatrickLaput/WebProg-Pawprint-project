@@ -51,20 +51,18 @@ $joined_date = !empty($user["created_at"])
     ? date("F Y", strtotime($user["created_at"]))
     : "Recently";
 
+$profile_folder = __DIR__ . "/../uploads/profiles/";
+
 if (
     !empty($user["profile_picture"]) &&
-    file_exists("uploads/profiles/" . $user["profile_picture"])
+    file_exists($profile_folder . $user["profile_picture"])
 ) {
-
     $profile_image =
-        "uploads/profiles/" .
-        htmlspecialchars($user["profile_picture"]);
-
+        "../uploads/profiles/" .
+        rawurlencode($user["profile_picture"]);
 } else {
-
-    $profile_image =
-        "../images/profile.png";
-}    
+    $profile_image = "../images/profile.png";
+}
 
 ?>
 

@@ -696,26 +696,33 @@ function filter_url($page_number, $sort)
 
                                     <!-- IMAGE -->
 
+                                    <?php
+                                    $product_image_path = __DIR__ . "/../" . ltrim($product["image"], "/");
+                                    $product_image_url = "../" . ltrim($product["image"], "/");
+                                    ?>
+
                                     <div class="product-image">
 
                                         <?php if (
                                             !empty($product["image"]) &&
-                                            file_exists($product["image"])
+                                            file_exists($product_image_path)
                                         ): ?>
 
                                             <img
-                                                src="<?php echo htmlspecialchars($product["image"]); ?>"
+                                                src="<?php echo htmlspecialchars($product_image_url); ?>"
                                                 alt="<?php echo htmlspecialchars($product["name"]); ?>"
                                             >
 
                                         <?php else: ?>
 
-                                            <img src="../products/petfood.png">
+                                            <img
+                                                src="../images/petfood.png"
+                                                alt="Product image"
+                                            >
 
                                         <?php endif; ?>
 
                                     </div>
-
 
                                     <!-- DETAILS -->
 
