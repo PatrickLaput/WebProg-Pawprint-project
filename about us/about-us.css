@@ -181,7 +181,7 @@
     width: 100%;
     padding: 35px 7%;
     background-color: var(--background-color);
-    background-image: url("images/au-bg.png");
+    background-image: url("../images/au-bg.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% auto;
@@ -305,7 +305,7 @@
     min-height: 430px;
     padding: 30px 5% 50px;
     background-color: var(--background-color);
-    background-image: url("images/au-bg2.png");
+    background-image: url("../images/au-bg2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 85% auto;
@@ -411,7 +411,7 @@
     display: grid;
     grid-template-columns: 42% 58%;
     background-color: var(--background-color2);
-    background-image: url("images/au-bg3.png");
+    background-image: url("../images/au-bg3.png");
     background-repeat: no-repeat;
     background-position-x: 590px;
     background-position-y: center;

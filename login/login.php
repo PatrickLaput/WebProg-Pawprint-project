@@ -14,27 +14,24 @@
             <div class="nav">
 
                 <div class="logo">
-                    <a href="index.php">
-                        <img src="images/logo.png" alt="Pawprint Logo">
+                    <a href="../index.php">
+                        <img src="../images/logo.png" alt="Pawprint Logo">
                     </a>
                 </div>
 
                 <nav class="nav-links">
-                    <a href="index.php">Home</a>
-                    <a href="shop.php" >Shop</a>
-                    <a href="about-us.php">About Us</a>
-                    <a href="contact.php">Contact</a>
+                    <a href="../index.php">Home</a>
+                    <a href="../shop/shop.php">Shop</a>
+                    <a href="../about us/about-us.php">About Us</a>
+                    <a href="../contact us/contact.php">Contact</a>
                 </nav>
 
                 <div class="nav-icons">
-                    <a href="#">
-                        <img src="images/search.png" alt="Search">
+                    <a href="../cart/cart.php">
+                        <img src="../images/cart.png" alt="Cart">
                     </a>
-                    <a href="#">
-                        <img src="images/cart.png" alt="Cart">
-                    </a>
-                    <a href="account.php">
-                        <img src="images/acc.png" alt="Account">
+                    <a href="../account/account.php">
+                        <img src="../images/acc.png" alt="Account">
                     </a>
                 </div>
             </div>
@@ -45,7 +42,7 @@
             <div class="login-card">
 
                 <div class="login-card-header">
-                    <img src="images/pawprint.png" alt="Paw" class="login-paw">
+                    <img src="../images/pawprint.png" alt="Paw" class="login-paw">
                     <h1>Sign In</h1>
                     <p>Good to see you again!</p>
                 </div>
@@ -76,19 +73,18 @@
                     
                     <p class="signup-text">
                         Don't have an account?
-                        <a href="signup.php">Sign Up</a>
+                        <a href="../signup/signup.php">Sign Up</a>
                     </p>
                 </form>
             </div>
         </section>
-
 
         <footer class="footer">
 
             <div class="footer-container">
                 <div class="footer-brand">
 
-                    <img src="images/logo-white.png" alt="Pawprint" class="footer-logo">
+                    <img src="../images/logo-white.png" alt="Pawprint" class="footer-logo">
                     <p>
                         Quality pet food, toys, and accessories<br>
                         made for happy pets and happier<br>
@@ -96,36 +92,33 @@
                     </p>
 
                     <div class="footer-socials">
-                        <a href="#" aria-label="YouTube">
-                            <img src="images/yt-ico.png" alt="YouTube">
+                        <a href="https://youtube.com" aria-label="YouTube">
+                            <img src="../images/yt-ico.png" alt="YouTube">
                         </a>
-                        <a href="#" aria-label="Facebook">
-                            <img src="images/fb-ico.png" alt="Facebook">
+                        <a href="https://facebook.com" aria-label="Facebook">
+                            <img src="../images/fb-ico.png" alt="Facebook">
                         </a>
-                        <a href="#" aria-label="Instagram">
-                            <img src="images/ig-ico.png" alt="Instagram">
+                        <a href="https://instagram.com" aria-label="Instagram">
+                            <img src="../images/ig-ico.png" alt="Instagram">
                         </a>
-                        <a href="#" aria-label="TikTok">
-                            <img src="images/tk-ico.png" alt="TikTok">
+                        <a href="https://tiktok.com" aria-label="TikTok">
+                            <img src="../images/tk-ico.png" alt="TikTok">
                         </a>
                     </div>
                 </div>
 
                 <div class="footer-column">
                     <h3>Quick Links</h3>
-                    <a href="#">Shop</a>
-                    <a href="about-us.php">About Us</a>
-                    <a href="contact.php">Contact Us</a>
-                    <a href="#">FAQs</a>
+                    <a href="../shop/shop.php">Shop</a>
+                    <a href="../about us/about-us.php">About Us</a>
+                    <a href="../contact us/contact.php">Contact Us</a>
                 </div>
 
                 <div class="footer-column">
                     <h3>Customer Care</h3>
-                    <a href="#">My Account</a>
-                    <a href="#">Track Order</a>
-                    <a href="#">Shipping & Returns</a>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Privacy Policy</a>
+                    <a href="../account/account.php">My Account</a>
+                    <a href="../terms&privacy.php">Terms & Conditions</a>
+                    <a href="../terms&privacy.php">Privacy Policy</a>
                 </div>
 
                 <div class="footer-newsletter">
@@ -143,7 +136,7 @@
                     </form>
                 </div>
             </div>
-            <img src="images/pawprint-brown.png" alt="" class="footer-paw">
+            <img src="../images/pawprint-brown.png" alt="" class="footer-paw">
 
         </footer>
 

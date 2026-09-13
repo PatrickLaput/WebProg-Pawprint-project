@@ -1,9 +1,8 @@
 <?php
 
-session_start();
+ session_start();
 
-require_once "db.php";
-
+require_once '../db.php';
 
 /* =========================================================
    FILTERS
@@ -311,577 +310,572 @@ function filter_url($page_number, $sort)
             <div class="nav">
 
                 <div class="logo">
-                    <a href="#">
-                        <img src="images/logo.png" alt="Pawprint Logo">
+                    <a href="../index.php">
+                        <img src="../images/logo.png" alt="Pawprint Logo">
                     </a>
                 </div>
 
                 <nav class="nav-links">
-                    <a href="index.php" >Home</a>
-                    <a href="shop.php" class="active">Shop</a>
-                    <a href="about-us.php">About Us</a>
-                    <a href="contact.php">Contact</a>
+                    <a href="../index.php">Home</a>
+                    <a href="shop.php">Shop</a>
+                    <a href="../about us/about-us.php">About Us</a>
+                    <a href="../contat us/contact.php">Contact</a>
                 </nav>
 
                 <div class="nav-icons">
+                    <a href="../cart/cart.php">
+                        <img src="../images/cart.png" alt="Cart">
+                    </a>
                     <a href="#" class="search-toggle" aria-label="Search">
-                        <img src="images/search.png" alt="Search">
+                        <img src="../images/search.png" alt="search">
                     </a>
-                    <a href="cart.php">
-                        <img src="images/cart.png" alt="Cart">
-                    </a>
-                    <a href="account.php">
-                        <img src="images/acc.png" alt="Account">
+                    <a href="../account/account.php">
+                        <img src="../images/acc.png" alt="Account">
                     </a>
                 </div>
             </div>
         </header>
 
-<div class="search-overlay" id="search-overlay">
+        <div class="search-overlay" id="search-overlay">
 
-    <div class="search-box">
+            <div class="search-box">
 
-        <form action="shop.php" method="GET" id="search-form">
-
-            <input
-                type="text"
-                name="search"
-                id="search-input"
-                placeholder="Search products..."
-                autocomplete="off"
-            >
-
-            <button type="submit" aria-label="Search">
-                <img src="images/search.png" alt="Search">
-            </button>
-
-        </form>
-
-    </div>
-
-</div>
-
-
-<!-- =====================================================
-     SHOP
-===================================================== -->
-
-<section class="shop-section">
-
-    <div class="shop-container">
-
-
-        <!-- =================================================
-             FILTERS
-        ================================================== -->
-
-        <aside class="shop-filters">
-
-            <h2>Filters</h2>
-
-
-            <form method="GET"
-                  action="shop.php"
-                  id="filter-form">
-
-
-                <!-- Categories -->
-
-                <div class="filter-section">
-
-                    <h3>Categories</h3>
-
-
-                    <?php
-
-                    $category_list = [
-                        "Pet Food",
-                        "Toys",
-                        "Accessories",
-                        "Beds & Furniture",
-                        "Grooming",
-                        "Health & Wellness"
-                    ];
-
-                    foreach ($category_list as $category):
-
-                        $checked =
-                            in_array(
-                                $category,
-                                $categories
-                            );
-
-                    ?>
-
-                    <label class="filter-option">
-
-                        <input
-                            type="checkbox"
-                            name="category[]"
-                            value="<?php echo htmlspecialchars($category); ?>"
-                            <?php echo $checked ? "checked" : ""; ?>
-                        >
-
-                        <span class="filter-name">
-                            <?php echo htmlspecialchars($category); ?>
-                        </span>
-
-                        <span class="filter-count">
-                            (<?php echo $category_counts[$category] ?? 0; ?>)
-                        </span>
-
-                    </label>
-
-                    <?php endforeach; ?>
-
-                </div>
-
-
-                <!-- Pet Type -->
-
-                <div class="filter-section">
-
-                    <h3>Pet Type</h3>
-
-
-                    <?php
-
-                    $pet_list = [
-                        "Dogs",
-                        "Cats",
-                        "Both"
-                    ];
-
-                    foreach ($pet_list as $pet):
-
-                        $checked =
-                            in_array(
-                                $pet,
-                                $pet_types
-                            );
-
-                    ?>
-
-                    <label class="filter-option">
-
-                        <input
-                            type="checkbox"
-                            name="pet_type[]"
-                            value="<?php echo htmlspecialchars($pet); ?>"
-                            <?php echo $checked ? "checked" : ""; ?>
-                        >
-
-                        <span class="filter-name">
-                            <?php echo htmlspecialchars($pet); ?>
-                        </span>
-
-                        <span class="filter-count">
-                            (<?php echo $pet_counts[$pet] ?? 0; ?>)
-                        </span>
-
-                    </label>
-
-                    <?php endforeach; ?>
-
-                </div>
-
-
-                <!-- Price -->
-
-                <div class="filter-section">
-
-                    <h3>Price Range</h3>
-
-                    <div class="price-values">
-
-                        <span id="min-price-label">
-                            ₱<?php echo number_format($min_price, 0); ?>
-                        </span>
-
-                        <span id="max-price-label">
-                            ₱<?php echo number_format($max_price, 0); ?>
-                        </span>
-
-                    </div>
-
-
-                    <div class="price-slider">
-
-                        <input
-                            type="range"
-                            name="min_price"
-                            id="min-price"
-                            min="0"
-                            max="2500"
-                            value="<?php echo $min_price; ?>"
-                        >
-
-                        <input
-                            type="range"
-                            name="max_price"
-                            id="max-price"
-                            min="0"
-                            max="2500"
-                            value="<?php echo $max_price; ?>"
-                        >
-
-                    </div>
-
-                </div>
-
-
-                <input
-                    type="hidden"
-                    name="sort"
-                    value="<?php echo htmlspecialchars($sort); ?>"
-                >
-
-
-                <button
-                    type="submit"
-                    class="apply-filter-btn"
-                >
-                    Apply Filters
-                </button>
-
-            </form>
-
-        </aside>
-
-
-        <!-- =================================================
-             PRODUCTS
-        ================================================== -->
-
-        <div class="shop-products">
-
-
-            <!-- HEADER -->
-
-            <div class="products-header">
-
-                <div>
-
-                    <h1>All Products</h1>
-
-                    <?php
-
-                    $start =
-                        $total_products > 0
-                            ? $offset + 1
-                            : 0;
-
-                    $end =
-                        min(
-                            $offset + $per_page,
-                            $total_products
-                        );
-
-                    ?>
-
-                    <p>
-                        Showing
-                        <?php echo $start; ?>
-                        –
-                        <?php echo $end; ?>
-                        of
-                        <?php echo $total_products; ?>
-                        products
-                    </p>
-
-                </div>
-
-
-                <!-- SORT -->
-
-                <form method="GET"
-                      action="shop.php">
-
-                    <?php foreach ($categories as $category): ?>
-
-                        <input
-                            type="hidden"
-                            name="category[]"
-                            value="<?php echo htmlspecialchars($category); ?>"
-                        >
-
-                    <?php endforeach; ?>
-
-
-                    <?php foreach ($pet_types as $pet): ?>
-
-                        <input
-                            type="hidden"
-                            name="pet_type[]"
-                            value="<?php echo htmlspecialchars($pet); ?>"
-                        >
-
-                    <?php endforeach; ?>
-
+                <form action="shop.php" method="GET" id="search-form">
 
                     <input
-                        type="hidden"
-                        name="min_price"
-                        value="<?php echo $min_price; ?>"
+                        type="text"
+                        name="search"
+                        id="search-input"
+                        placeholder="Search products..."
+                        autocomplete="off"
                     >
 
-                    <input
-                        type="hidden"
-                        name="max_price"
-                        value="<?php echo $max_price; ?>"
-                    >
-
-
-                    <select
-                        class="sort-select"
-                        name="sort"
-                        onchange="this.form.submit()"
-                    >
-
-                        <option
-                            value="best"
-                            <?php echo $sort === "best" ? "selected" : ""; ?>
-                        >
-                            Sort by: Best Selling
-                        </option>
-
-                        <option
-                            value="price_low"
-                            <?php echo $sort === "price_low" ? "selected" : ""; ?>
-                        >
-                            Price: Low to High
-                        </option>
-
-                        <option
-                            value="price_high"
-                            <?php echo $sort === "price_high" ? "selected" : ""; ?>
-                        >
-                            Price: High to Low
-                        </option>
-
-                        <option
-                            value="newest"
-                            <?php echo $sort === "newest" ? "selected" : ""; ?>
-                        >
-                            Newest
-                        </option>
-
-                    </select>
+                    <button type="submit" aria-label="Search">
+                        <img src="../images/search.png" alt="Search">
+                    </button>
 
                 </form>
 
             </div>
 
+        </div>
 
-            <!-- PRODUCT GRID -->
+        <section class="shop-section">
 
-            <div class="product-grid">
-
-
-                <?php if (empty($products)): ?>
-
-                    <div class="no-products">
-
-                        <h2>No products found</h2>
-
-                        <p>
-                            Try changing your filters.
-                        </p>
-
-                    </div>
+            <div class="shop-container">
 
 
-                <?php else: ?>
+                <!-- =================================================
+                    FILTERS
+                ================================================== -->
+
+                <aside class="shop-filters">
+
+                    <h2>Filters</h2>
 
 
-                    <?php foreach ($products as $product): ?>
+                    <form method="GET"
+                        action="shop.php"
+                        id="filter-form">
 
 
-                        <div class="product-card">
+                        <!-- Categories -->
+
+                        <div class="filter-section">
+
+                            <h3>Categories</h3>
 
 
-                            <!-- IMAGE -->
+                            <?php
 
-                            <div class="product-image">
+                            $category_list = [
+                                "Pet Food",
+                                "Toys",
+                                "Accessories",
+                                "Beds & Furniture",
+                                "Grooming",
+                                "Health & Wellness"
+                            ];
 
-                                <?php if (
-                                    !empty($product["image"]) &&
-                                    file_exists($product["image"])
-                                ): ?>
+                            foreach ($category_list as $category):
 
-                                    <img
-                                        src="<?php echo htmlspecialchars($product["image"]); ?>"
-                                        alt="<?php echo htmlspecialchars($product["name"]); ?>"
-                                    >
+                                $checked =
+                                    in_array(
+                                        $category,
+                                        $categories
+                                    );
 
-                                <?php else: ?>
+                            ?>
 
-                                    <img src="products/petfood.png">
+                            <label class="filter-option">
 
-                                <?php endif; ?>
+                                <input
+                                    type="checkbox"
+                                    name="category[]"
+                                    value="<?php echo htmlspecialchars($category); ?>"
+                                    <?php echo $checked ? "checked" : ""; ?>
+                                >
+
+                                <span class="filter-name">
+                                    <?php echo htmlspecialchars($category); ?>
+                                </span>
+
+                                <span class="filter-count">
+                                    (<?php echo $category_counts[$category] ?? 0; ?>)
+                                </span>
+
+                            </label>
+
+                            <?php endforeach; ?>
+
+                        </div>
+
+
+                        <!-- Pet Type -->
+
+                        <div class="filter-section">
+
+                            <h3>Pet Type</h3>
+
+
+                            <?php
+
+                            $pet_list = [
+                                "Dogs",
+                                "Cats",
+                                "Both"
+                            ];
+
+                            foreach ($pet_list as $pet):
+
+                                $checked =
+                                    in_array(
+                                        $pet,
+                                        $pet_types
+                                    );
+
+                            ?>
+
+                            <label class="filter-option">
+
+                                <input
+                                    type="checkbox"
+                                    name="pet_type[]"
+                                    value="<?php echo htmlspecialchars($pet); ?>"
+                                    <?php echo $checked ? "checked" : ""; ?>
+                                >
+
+                                <span class="filter-name">
+                                    <?php echo htmlspecialchars($pet); ?>
+                                </span>
+
+                                <span class="filter-count">
+                                    (<?php echo $pet_counts[$pet] ?? 0; ?>)
+                                </span>
+
+                            </label>
+
+                            <?php endforeach; ?>
+
+                        </div>
+
+
+                        <!-- Price -->
+
+                        <div class="filter-section">
+
+                            <h3>Price Range</h3>
+
+                            <div class="price-values">
+
+                                <span id="min-price-label">
+                                    ₱<?php echo number_format($min_price, 0); ?>
+                                </span>
+
+                                <span id="max-price-label">
+                                    ₱<?php echo number_format($max_price, 0); ?>
+                                </span>
 
                             </div>
 
 
-                            <!-- DETAILS -->
+                            <div class="price-slider">
 
-                            <div class="product-details">
+                                <input
+                                    type="range"
+                                    name="min_price"
+                                    id="min-price"
+                                    min="0"
+                                    max="2500"
+                                    value="<?php echo $min_price; ?>"
+                                >
 
-                                <h3>
-                                    <?php echo htmlspecialchars($product["name"]); ?>
-                                </h3>
-
-
-                                <div class="rating">
-
-                                    <span>
-                                        ★★★★★
-                                    </span>
-
-                                    <small>
-                                        (<?php echo $product["review_count"]; ?>)
-                                    </small>
-
-                                </div>
-
-
-                                <p class="product-price">
-
-                                    ₱<?php
-                                    echo number_format(
-                                        $product["price"],
-                                        2
-                                    );
-                                    ?>
-
-                                </p>
-
-
-                                <?php if ($product["stock"] > 0): ?>
-
-                                    <form
-                                        method="POST"
-                                        action="add-to-cart.php"
-                                    >
-
-                                        <input
-                                            type="hidden"
-                                            name="product_id"
-                                            value="<?php echo $product["prod_id"]; ?>"
-                                        >
-
-                                        <input
-                                            type="hidden"
-                                            name="quantity"
-                                            value="1"
-                                        >
-
-                                        <button
-                                            type="submit"
-                                            class="add-cart"
-                                        >
-                                            Add to Cart
-                                        </button>
-
-                                    </form>
-
-                                <?php else: ?>
-
-                                    <button
-                                        class="add-cart out-of-stock"
-                                        disabled
-                                    >
-                                        Out of Stock
-                                    </button>
-
-                                <?php endif; ?>
+                                <input
+                                    type="range"
+                                    name="max_price"
+                                    id="max-price"
+                                    min="0"
+                                    max="2500"
+                                    value="<?php echo $max_price; ?>"
+                                >
 
                             </div>
 
                         </div>
 
 
-                    <?php endforeach; ?>
-
-
-                <?php endif; ?>
-
-            </div>
-
-
-            <!-- =================================================
-                 PAGINATION
-            ================================================== -->
-
-            <?php if ($total_pages > 1): ?>
-
-                <div class="pagination">
-
-
-                    <!-- PREVIOUS -->
-
-                    <?php if ($page > 1): ?>
-
-                        <a
-                            href="<?php echo filter_url($page - 1, $sort); ?>"
-                            class="page-arrow"
+                        <input
+                            type="hidden"
+                            name="sort"
+                            value="<?php echo htmlspecialchars($sort); ?>"
                         >
-                            ‹
-                        </a>
-
-                    <?php endif; ?>
 
 
-                    <!-- PAGE NUMBERS -->
-
-                    <?php for (
-                        $i = 1;
-                        $i <= $total_pages;
-                        $i++
-                    ): ?>
-
-                        <a
-                            href="<?php echo filter_url($i, $sort); ?>"
-                            class="page-number
-                            <?php echo $i == $page ? "active" : ""; ?>"
+                        <button
+                            type="submit"
+                            class="apply-filter-btn"
                         >
-                            <?php echo $i; ?>
-                        </a>
+                            Apply Filters
+                        </button>
 
-                    <?php endfor; ?>
+                    </form>
+
+                </aside>
 
 
-                    <!-- NEXT -->
+                <!-- =================================================
+                    PRODUCTS
+                ================================================== -->
 
-                    <?php if ($page < $total_pages): ?>
+                <div class="shop-products">
 
-                        <a
-                            href="<?php echo filter_url($page + 1, $sort); ?>"
-                            class="page-arrow"
-                        >
-                            ›
-                        </a>
+
+                    <!-- HEADER -->
+
+                    <div class="products-header">
+
+                        <div>
+
+                            <h1>All Products</h1>
+
+                            <?php
+
+                            $start =
+                                $total_products > 0
+                                    ? $offset + 1
+                                    : 0;
+
+                            $end =
+                                min(
+                                    $offset + $per_page,
+                                    $total_products
+                                );
+
+                            ?>
+
+                            <p>
+                                Showing
+                                <?php echo $start; ?>
+                                –
+                                <?php echo $end; ?>
+                                of
+                                <?php echo $total_products; ?>
+                                products
+                            </p>
+
+                        </div>
+
+
+                        <!-- SORT -->
+
+                        <form method="GET"
+                            action="shop.php">
+
+                            <?php foreach ($categories as $category): ?>
+
+                                <input
+                                    type="hidden"
+                                    name="category[]"
+                                    value="<?php echo htmlspecialchars($category); ?>"
+                                >
+
+                            <?php endforeach; ?>
+
+
+                            <?php foreach ($pet_types as $pet): ?>
+
+                                <input
+                                    type="hidden"
+                                    name="pet_type[]"
+                                    value="<?php echo htmlspecialchars($pet); ?>"
+                                >
+
+                            <?php endforeach; ?>
+
+
+                            <input
+                                type="hidden"
+                                name="min_price"
+                                value="<?php echo $min_price; ?>"
+                            >
+
+                            <input
+                                type="hidden"
+                                name="max_price"
+                                value="<?php echo $max_price; ?>"
+                            >
+
+
+                            <select
+                                class="sort-select"
+                                name="sort"
+                                onchange="this.form.submit()"
+                            >
+
+                                <option
+                                    value="best"
+                                    <?php echo $sort === "best" ? "selected" : ""; ?>
+                                >
+                                    Sort by: Best Selling
+                                </option>
+
+                                <option
+                                    value="price_low"
+                                    <?php echo $sort === "price_low" ? "selected" : ""; ?>
+                                >
+                                    Price: Low to High
+                                </option>
+
+                                <option
+                                    value="price_high"
+                                    <?php echo $sort === "price_high" ? "selected" : ""; ?>
+                                >
+                                    Price: High to Low
+                                </option>
+
+                                <option
+                                    value="newest"
+                                    <?php echo $sort === "newest" ? "selected" : ""; ?>
+                                >
+                                    Newest
+                                </option>
+
+                            </select>
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- PRODUCT GRID -->
+
+                    <div class="product-grid">
+
+
+                        <?php if (empty($products)): ?>
+
+                            <div class="no-products">
+
+                                <h2>No products found</h2>
+
+                                <p>
+                                    Try changing your filters.
+                                </p>
+
+                            </div>
+
+
+                        <?php else: ?>
+
+
+                            <?php foreach ($products as $product): ?>
+
+
+                                <div class="product-card">
+
+
+                                    <!-- IMAGE -->
+
+                                    <div class="product-image">
+
+                                        <?php if (
+                                            !empty($product["image"]) &&
+                                            file_exists($product["image"])
+                                        ): ?>
+
+                                            <img
+                                                src="<?php echo htmlspecialchars($product["image"]); ?>"
+                                                alt="<?php echo htmlspecialchars($product["name"]); ?>"
+                                            >
+
+                                        <?php else: ?>
+
+                                            <img src="../products/petfood.png">
+
+                                        <?php endif; ?>
+
+                                    </div>
+
+
+                                    <!-- DETAILS -->
+
+                                    <div class="product-details">
+
+                                        <h3>
+                                            <?php echo htmlspecialchars($product["name"]); ?>
+                                        </h3>
+
+
+                                        <div class="rating">
+
+                                            <span>
+                                                ★★★★★
+                                            </span>
+
+                                            <small>
+                                                (<?php echo $product["review_count"]; ?>)
+                                            </small>
+
+                                        </div>
+
+
+                                        <p class="product-price">
+
+                                            ₱<?php
+                                            echo number_format(
+                                                $product["price"],
+                                                2
+                                            );
+                                            ?>
+
+                                        </p>
+
+
+                                        <?php if ($product["stock"] > 0): ?>
+
+                                            <form
+                                                method="POST"
+                                                action="add-to-cart.php"
+                                            >
+
+                                                <input
+                                                    type="hidden"
+                                                    name="product_id"
+                                                    value="<?php echo $product["prod_id"]; ?>"
+                                                >
+
+                                                <input
+                                                    type="hidden"
+                                                    name="quantity"
+                                                    value="1"
+                                                >
+
+                                                <button
+                                                    type="submit"
+                                                    class="add-cart"
+                                                >
+                                                    Add to Cart
+                                                </button>
+
+                                            </form>
+
+                                        <?php else: ?>
+
+                                            <button
+                                                class="add-cart out-of-stock"
+                                                disabled
+                                            >
+                                                Out of Stock
+                                            </button>
+
+                                        <?php endif; ?>
+
+                                    </div>
+
+                                </div>
+
+
+                            <?php endforeach; ?>
+
+
+                        <?php endif; ?>
+
+                    </div>
+
+
+                    <!-- =================================================
+                        PAGINATION
+                    ================================================== -->
+
+                    <?php if ($total_pages > 1): ?>
+
+                        <div class="pagination">
+
+
+                            <!-- PREVIOUS -->
+
+                            <?php if ($page > 1): ?>
+
+                                <a
+                                    href="<?php echo filter_url($page - 1, $sort); ?>"
+                                    class="page-arrow"
+                                >
+                                    ‹
+                                </a>
+
+                            <?php endif; ?>
+
+
+                            <!-- PAGE NUMBERS -->
+
+                            <?php for (
+                                $i = 1;
+                                $i <= $total_pages;
+                                $i++
+                            ): ?>
+
+                                <a
+                                    href="<?php echo filter_url($i, $sort); ?>"
+                                    class="page-number
+                                    <?php echo $i == $page ? "active" : ""; ?>"
+                                >
+                                    <?php echo $i; ?>
+                                </a>
+
+                            <?php endfor; ?>
+
+
+                            <!-- NEXT -->
+
+                            <?php if ($page < $total_pages): ?>
+
+                                <a
+                                    href="<?php echo filter_url($page + 1, $sort); ?>"
+                                    class="page-arrow"
+                                >
+                                    ›
+                                </a>
+
+                            <?php endif; ?>
+
+
+                        </div>
 
                     <?php endif; ?>
 
 
                 </div>
 
-            <?php endif; ?>
+            </div>
 
+        </section>
 
-        </div>
-
-    </div>
-
-</section>
-
-<footer class="footer">
+        <footer class="footer">
 
             <div class="footer-container">
                 <div class="footer-brand">
 
-                    <img src="images/logo-white.png" alt="Pawprint" class="footer-logo">
+                    <img src="../images/logo-white.png" alt="Pawprint" class="footer-logo">
                     <p>
                         Quality pet food, toys, and accessories<br>
                         made for happy pets and happier<br>
@@ -889,17 +883,17 @@ function filter_url($page_number, $sort)
                     </p>
 
                     <div class="footer-socials">
-                        <a href="#" aria-label="YouTube">
-                            <img src="images/yt-ico.png" alt="YouTube">
+                        <a href="https://youtube.com" aria-label="YouTube">
+                            <img src="../images/yt-ico.png" alt="YouTube">
                         </a>
-                        <a href="#" aria-label="Facebook">
-                            <img src="images/fb-ico.png" alt="Facebook">
+                        <a href="https://facebook.com" aria-label="Facebook">
+                            <img src="../images/fb-ico.png" alt="Facebook">
                         </a>
-                        <a href="#" aria-label="Instagram">
-                            <img src="images/ig-ico.png" alt="Instagram">
+                        <a href="https://instagram.com" aria-label="Instagram">
+                            <img src="../images/ig-ico.png" alt="Instagram">
                         </a>
-                        <a href="#" aria-label="TikTok">
-                            <img src="images/tk-ico.png" alt="TikTok">
+                        <a href="https://tiktok.com" aria-label="TikTok">
+                            <img src="../images/tk-ico.png" alt="TikTok">
                         </a>
                     </div>
                 </div>
@@ -907,18 +901,15 @@ function filter_url($page_number, $sort)
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <a href="shop.php">Shop</a>
-                    <a href="about-us.php">About Us</a>
-                    <a href="contact.php">Contact Us</a>
-                    <a href="#">FAQs</a>
+                    <a href="../about us/about-us.php">About Us</a>
+                    <a href="../contact us/contact.php">Contact Us</a>
                 </div>
 
                 <div class="footer-column">
                     <h3>Customer Care</h3>
-                    <a href="#">My Account</a>
-                    <a href="#">Track Order</a>
-                    <a href="#">Shipping & Returns</a>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Privacy Policy</a>
+                    <a href="../account/account.php">My Account</a>
+                    <a href="../terms&privacy.php">Terms & Conditions</a>
+                    <a href="../terms&privacy.php">Privacy Policy</a>
                 </div>
 
                 <div class="footer-newsletter">
@@ -936,7 +927,7 @@ function filter_url($page_number, $sort)
                     </form>
                 </div>
             </div>
-            <img src="images/pawprint-brown.png" alt="" class="footer-paw">
+            <img src="../images/pawprint-brown.png" alt="" class="footer-paw">
 
         </footer>
 

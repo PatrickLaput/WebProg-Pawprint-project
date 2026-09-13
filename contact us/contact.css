@@ -215,7 +215,7 @@
     min-height: 620px;
     padding: 20px 30px;
     background-color: var(--background-color);
-    background-image: url("images/c-bg.png");
+    background-image: url("../images/c-bg.png");
     background-repeat: no-repeat;
     background-position-x: 1300px;
     background-position-y: center;
@@ -579,7 +579,7 @@
     border-radius: 28px;
     overflow: hidden;
     padding: 20px 8% 20px 32%;
-    background-image: url("images/c-bg2.png");
+    background-image: url("../images/c-bg2.png");
     background-repeat: no-repeat;
     background-position-x: 1200px;
     background-position-y: center;

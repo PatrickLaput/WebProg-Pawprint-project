@@ -12,27 +12,24 @@
             <div class="nav">
 
                 <div class="logo">
-                    <a href="#">
-                        <img src="images/logo.png" alt="Pawprint Logo">
+                    <a href="../index.php">
+                        <img src="../images/logo.png" alt="Pawprint Logo">
                     </a>
                 </div>
 
                 <nav class="nav-links">
-                    <a href="index.php">Home</a>
-                    <a href="shop.php">Shop</a>
-                    <a href="about-us.php">About Us</a>
-                    <a href="#" class="active">Contact</a>
+                    <a href="../index.php">Home</a>
+                    <a href="../shop/shop.php">Shop</a>
+                    <a href="../about us/about-us.php">About Us</a>
+                    <a href="contact.php">Contact</a>
                 </nav>
 
                 <div class="nav-icons">
-                    <a href="#">
-                        <img src="images/search.png" alt="Search">
+                    <a href="../cart/cart.php">
+                        <img src="../images/cart.png" alt="Cart">
                     </a>
-                    <a href="#">
-                        <img src="images/cart.png" alt="Cart">
-                    </a>
-                    <a href="account.php">
-                        <img src="images/acc.png" alt="Account">
+                    <a href="../account/account.php">
+                        <img src="../images/acc.png" alt="Account">
                     </a>
                 </div>
             </div>
@@ -54,7 +51,7 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon email-icon">
-                            <img src="images/mail-ico.png" alt="Email">
+                            <img src="../images/mail-ico.png" alt="Email">
                         </div>
 
                         <div>
@@ -65,7 +62,7 @@
 
                     <div class="contact-item">
                         <div class="contact-icon phone-icon">
-                            <img src="images/telephone-ico.png" alt="Phone">
+                            <img src="../images/telephone-ico.png" alt="Phone">
                         </div>
 
                         <div>
@@ -76,7 +73,7 @@
 
                     <div class="contact-item">
                         <div class="contact-icon hours-icon">
-                            <img src="images/clock-ico.png" alt="Opening hours">
+                            <img src="../images/clock-ico.png" alt="Opening hours">
                         </div>
 
                         <div>
@@ -88,7 +85,7 @@
             </div>
 
             <div class="contact-hero-image">
-                <img src="images/contact-hero.png" alt="Dog and cat">
+                <img src="../images/contact-hero.png" alt="Dog and cat">
             </div>
         </section>
 
@@ -99,7 +96,7 @@
                 <div class="contact-form-box">
 
                     <div class="section-title">
-                        <img src="images/pawprint.png" alt="">
+                        <img src="../images/pawprint.png" alt="">
                         <h2>Send Us a Message</h2>
                     </div>
 
@@ -129,7 +126,7 @@
                         <textarea placeholder="Message" required></textarea>
 
                         <button type="submit">
-                            <img src="images/pawprint-white.png" alt="">
+                            <img src="../images/pawprint-white.png" alt="">
                             Send Message
                         </button>
                     </form>
@@ -138,7 +135,7 @@
                 <div class="contact-information">
 
                     <div class="section-title">
-                        <img src="images/pawprint.png" alt="">
+                        <img src="../images/pawprint.png" alt="">
                         <h2>Contact Information</h2>
                     </div>
 
@@ -148,7 +145,7 @@
 
                     <div class="contact-detail-item">
                         <div class="detail-icon address-icon">
-                            <img src="images/location-ico.png" alt="Address">
+                            <img src="../images/location-ico.png" alt="Address">
                         </div>
 
                         <div class="detail-text">
@@ -163,7 +160,7 @@
 
                     <div class="contact-detail-item">
                         <div class="detail-icon email-icon">
-                            <img src="images/mail-ico.png" alt="Email">
+                            <img src="../images/mail-ico.png" alt="Email">
                         </div>
                         <div class="detail-text">
                             <h3>Email Us</h3>
@@ -176,7 +173,7 @@
 
                     <div class="contact-detail-item">
                         <div class="detail-icon phone-icon">
-                            <img src="images/telephone-ico.png" alt="Phone">
+                            <img src="../images/telephone-ico.png" alt="Phone">
                         </div>
 
                         <div class="detail-text">
@@ -190,7 +187,7 @@
 
                     <div class="contact-detail-item">
                         <div class="detail-icon hours-icon">
-                            <img src="images/clock-ico.png" alt="Business Hours">
+                            <img src="../images/clock-ico.png" alt="Business Hours">
                         </div>
                         <div class="detail-text">
                             <h3>Business Hours</h3>
@@ -203,7 +200,7 @@
 
                     <div class="contact-detail-item">
                         <div class="detail-icon chat-icon">
-                            <img src="images/chat-ico.png" alt="Live Chat">
+                            <img src="../images/chat-ico.png" alt="Live Chat">
                         </div>
 
                         <div class="detail-text">
@@ -224,7 +221,7 @@
 
                 <div class="help-header">
                     <div class="help-title">
-                        <img src="images/pawprint.png" alt="Paw">
+                        <img src="../images/pawprint.png" alt="Paw">
                         <h2>Need Help With?</h2>
                     </div>
                     <p>We're here to make your experience easy and enjoyable.</p>
@@ -233,7 +230,7 @@
                 <div class="help-categories">
                     <div class="help-item">
                         <div class="help-icon order-icon">
-                            <img src="images/bag.png" alt="Order Inquiries">
+                            <img src="../images/bag.png" alt="Order Inquiries">
                         </div>
 
                         <h3>Order Inquiries</h3>
@@ -242,7 +239,7 @@
 
                     <div class="help-item">
                         <div class="help-icon product-icon">
-                            <img src="images/box.png" alt="Product Information">
+                            <img src="../images/box.png" alt="Product Information">
                         </div>
                         <h3>Product Information</h3>
                         <p>Need help choosing<br>the right product?</p>
@@ -250,7 +247,7 @@
 
                     <div class="help-item">
                         <div class="help-icon returns-icon">
-                            <img src="images/undo.png" alt="Returns & Refunds">
+                            <img src="../images/undo.png" alt="Returns & Refunds">
                         </div>
                         <h3>Returns & Refunds</h3>
                         <p>Inquiries about returns<br>or exchanges?</p>
@@ -258,7 +255,7 @@
 
                     <div class="help-item">
                         <div class="help-icon account-icon">
-                            <img src="images/person.png" alt="Account Support">
+                            <img src="../images/person.png" alt="Account Support">
                         </div>
                         <h3>Account Support</h3>
                         <p>Need help with your<br>account or password?</p>
@@ -267,7 +264,7 @@
                     <div class="help-item">
 
                         <div class="help-icon concerns-icon">
-                            <img src="images/heart.png" alt="Other Concerns">
+                            <img src="../images/heart.png" alt="Other Concerns">
                         </div>
                         <h3>Other Concerns</h3>
                         <p>We're here for any other<br>questions you have.</p>
@@ -281,11 +278,11 @@
             <div class="contact-cta-container">
 
                 <div class="contact-cta-dog">
-                    <img src="images/corgi.png" alt="Happy dog">
+                    <img src="../images/corgi.png" alt="Happy dog">
                 </div>
 
                 <div class="contact-cta-icon">
-                    <img src="images/pawprint-white.png" alt="Paw">
+                    <img src="../images/pawprint-white.png" alt="Paw">
                 </div>
 
                 <div class="contact-cta-content">
@@ -306,7 +303,7 @@
             <div class="footer-container">
                 <div class="footer-brand">
 
-                    <img src="images/logo-white.png" alt="Pawprint" class="footer-logo">
+                    <img src="../images/logo-white.png" alt="Pawprint" class="footer-logo">
                     <p>
                         Quality pet food, toys, and accessories<br>
                         made for happy pets and happier<br>
@@ -314,36 +311,33 @@
                     </p>
 
                     <div class="footer-socials">
-                        <a href="#" aria-label="YouTube">
-                            <img src="images/yt-ico.png" alt="YouTube">
+                        <a href="https://youtube.com" aria-label="YouTube">
+                            <img src="../images/yt-ico.png" alt="YouTube">
                         </a>
-                        <a href="#" aria-label="Facebook">
-                            <img src="images/fb-ico.png" alt="Facebook">
+                        <a href="https://facebook.com" aria-label="Facebook">
+                            <img src="../images/fb-ico.png" alt="Facebook">
                         </a>
-                        <a href="#" aria-label="Instagram">
-                            <img src="images/ig-ico.png" alt="Instagram">
+                        <a href="https://instagram.com" aria-label="Instagram">
+                            <img src="../images/ig-ico.png" alt="Instagram">
                         </a>
-                        <a href="#" aria-label="TikTok">
-                            <img src="images/tk-ico.png" alt="TikTok">
+                        <a href="https://tiktok.com" aria-label="TikTok">
+                            <img src="../images/tk-ico.png" alt="TikTok">
                         </a>
                     </div>
                 </div>
 
                 <div class="footer-column">
                     <h3>Quick Links</h3>
-                    <a href="shop.php">Shop</a>
-                    <a href="about-us.php">About Us</a>
-                    <a href="#">Contact Us</a>
-                    <a href="#">FAQs</a>
+                    <a href="../shop/shop.php">Shop</a>
+                    <a href="../about us/about-us.php">About Us</a>
+                    <a href="contact.php">Contact Us</a>
                 </div>
 
                 <div class="footer-column">
                     <h3>Customer Care</h3>
-                    <a href="#">My Account</a>
-                    <a href="#">Track Order</a>
-                    <a href="#">Shipping & Returns</a>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Privacy Policy</a>
+                    <a href="../account/account.php">My Account</a>
+                    <a href="../terms&privacy.php">Terms & Conditions</a>
+                    <a href="../terms&privacy.php">Privacy Policy</a>
                 </div>
 
                 <div class="footer-newsletter">
@@ -361,7 +355,7 @@
                     </form>
                 </div>
             </div>
-            <img src="images/pawprint-brown.png" alt="" class="footer-paw">
+            <img src="../images/pawprint-brown.png" alt="" class="footer-paw">
 
         </footer>
 

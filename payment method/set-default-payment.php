@@ -1,11 +1,7 @@
 <?php
-session_start();
-require_once "db.php";
-
-if (!isset($_SESSION["user_id"])) {
-    header("Location: signup.php");
-    exit();
-}
+ 
+require_once __DIR__ . '/../db.php';
+require_once __DIR__ .'/../auth.php';
 
 $user_id = (int)$_SESSION["user_id"];
 

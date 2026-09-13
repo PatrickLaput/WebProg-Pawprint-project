@@ -14,6 +14,7 @@
 }
 
 /* header */
+/* header */
 .site-header {
     width: 100%;
     background-color: var(--background-color);
@@ -221,7 +222,7 @@
     width: 100%;
     padding: 20px 7% 50px;
     background-color: var(--background-color2);
-    background-image: url("images/background2.png");
+    background-image: url("../images/background2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% auto;
@@ -387,7 +388,7 @@
     width: 100%;
     padding: 30px 5% 60px;
     background-color: var(--background-color3);
-    background-image: url("images/background3.png");
+    background-image: url("../images/background3.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 90% auto;
@@ -578,7 +579,7 @@
     padding: 0;
     overflow: hidden;
     background-color: var(--background-color2);
-    background-image: url("images/background4.png");
+    background-image: url("../images/background4.png");
     background-repeat: no-repeat;
     background-position: right;
     background-size: 60% auto;
@@ -702,7 +703,7 @@
     min-height: 450px;
     padding: 0px;
     background-color: var(--background-color4);
-    background-image: url("images/background5.png");
+    background-image: url("../images/background5.png");
     background-repeat: no-repeat;
     background-size: 98% auto;
     background-position: center;
@@ -853,6 +854,7 @@
     background-color: #348b86;
 }
 
+/* footer */
 /* footer */
 .footer {
     position: relative;

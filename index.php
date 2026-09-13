@@ -20,17 +20,17 @@
                 </div>
 
                 <nav class="nav-links">
-                    <a href="#" class="active">Home</a>
-                    <a href="shop.php">Shop</a>
-                    <a href="about-us.php">About Us</a>
-                    <a href="contact.php">Contact</a>
+                    <a href="index.php">Home</a>
+                    <a href="shop/shop.php">Shop</a>
+                    <a href="about us/about-us.php">About Us</a>
+                    <a href="contact us/contact.php">Contact</a>
                 </nav>
 
                 <div class="nav-icons">
-                    <a href="cart.php">
+                    <a href="cart/cart.php">
                         <img src="images/cart.png" alt="Cart">
                     </a>
-                    <a href="account.php">
+                    <a href="account/account.php">
                         <img src="images/acc.png" alt="Account">
                     </a>
                 </div>
@@ -51,7 +51,7 @@
                     happier life together.
                 </p>
 
-                <a href="shop.php" class="hero-button">
+                <a href="shop/shop.php" class="hero-button">
                     Shop Now
                 </a>
             </div>
@@ -71,7 +71,7 @@
 
             <div class="category-grid">
 
-                <a href="shop.php?category=Pet%20Food" class="category-card category-food">
+                <a href="shop/shop.php?category=Pet%20Food" class="category-card category-food">
                     <h3>Pet Food</h3>
                     <div class="category-content">
                         <div class="category-image">
@@ -84,7 +84,7 @@
                     </div>
                 </a>
 
-                <a href="shop.php?category=Toys" class="category-card category-toys">
+                <a href="shop/shop.php?category=Toys" class="category-card category-toys">
                     <h3>Toys</h3>
                     <div class="category-content">
                         <div class="category-image">
@@ -97,7 +97,7 @@
                     </div>
                 </a>
 
-                <a href="shop.php?category=Accessories" class="category-card category-accessories">
+                <a href="shop/shop.php?category=Accessories" class="category-card category-accessories">
                     <h3>Accessories</h3>
                     <div class="category-content">
                         <div class="category-image">
@@ -139,7 +139,7 @@
 
                         <p class="product-price">₱499.00</p>
 
-                        <form method="POST" action="add-to-cart.php" class="bestseller-cart-form">
+                        <form method="POST" action="shop/add-to-cart.php" class="bestseller-cart-form">
                             <input type="hidden" name="product_id" value="1">
                             <input type="hidden" name="quantity" value="1">
 
@@ -169,7 +169,7 @@
 
                         <p class="product-price">₱199.00</p>
 
-                        <form method="POST" action="add-to-cart.php" class="bestseller-cart-form">
+                        <form method="POST" action="shop/add-to-cart.php" class="bestseller-cart-form">
                             <input type="hidden" name="product_id" value="3">
                             <input type="hidden" name="quantity" value="1">
 
@@ -199,7 +199,7 @@
 
                         <p class="product-price">₱349.00</p>
 
-                        <form method="POST" action="add-to-cart.php" class="bestseller-cart-form">
+                        <form method="POST" action="shop/add-to-cart.php" class="bestseller-cart-form">
                             <input type="hidden" name="product_id" value="5">
                             <input type="hidden" name="quantity" value="1">
 
@@ -229,7 +229,7 @@
 
                         <p class="product-price">₱1,299.00</p>
 
-                        <form method="POST" action="add-to-cart.php" class="bestseller-cart-form">
+                        <form method="POST" action="shop/add-to-cart.php" class="bestseller-cart-form">
                             <input type="hidden" name="product_id" value="7">
                             <input type="hidden" name="quantity" value="1">
 
@@ -507,14 +507,14 @@
 
                 <div class="footer-column">
                     <h3>Quick Links</h3>
-                    <a href="shop.php">Shop</a>
-                    <a href="about-us.php">About Us</a>
-                    <a href="contact.php">Contact Us</a>
+                    <a href="shop/shop.php">Shop</a>
+                    <a href="about us/about-us.php">About Us</a>
+                    <a href="contact us/contact.php">Contact Us</a>
                 </div>
 
                 <div class="footer-column">
                     <h3>Customer Care</h3>
-                    <a href="account.php">My Account</a>
+                    <a href="account/account.php">My Account</a>
                     <a href="terms&privacy.php">Terms & Conditions</a>
                     <a href="terms&privacy.php">Privacy Policy</a>
                 </div>

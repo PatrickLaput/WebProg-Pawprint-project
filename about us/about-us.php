@@ -12,27 +12,24 @@
             <div class="nav">
 
                 <div class="logo">
-                    <a href="index.php">
-                        <img src="images/logo.png" alt="Pawprint Logo">
+                    <a href="../index.php">
+                        <img src="../images/logo.png" alt="Pawprint Logo">
                     </a>
                 </div>
 
                 <nav class="nav-links">
-                    <a href="index.php">Home</a>
-                    <a href="shop.php">Shop</a>
-                    <a href="#" class="active">About Us</a>
-                    <a href="contact.php">Contact</a>
+                    <a href="../index.php">Home</a>
+                    <a href="../shop/shop.php">Shop</a>
+                    <a href="about-us.php">About Us</a>
+                    <a href="../contact us/contact.php">Contact</a>
                 </nav>
 
                 <div class="nav-icons">
-                    <a href="#">
-                        <img src="images/search.png" alt="Search">
+                    <a href="../cart/cart.php">
+                        <img src="../images/cart.png" alt="Cart">
                     </a>
-                    <a href="#">
-                        <img src="images/cart.png" alt="Cart">
-                    </a>
-                    <a href="account.php">
-                        <img src="images/acc.png" alt="Account">
+                    <a href="../account/account.php">
+                        <img src="../images/acc.png" alt="Account">
                     </a>
                 </div>
             </div>
@@ -48,7 +45,7 @@
                 </h1>
 
                 <div class="about-heart">
-                    <img src="images/hrt-trans.png" alt="">
+                    <img src="../images/hrt-trans.png" alt="">
                 </div>
 
                 <p>
@@ -63,7 +60,7 @@
 
 
             <div class="about-hero-image">
-                <img src="images/au-hero.png" alt="Dog and cat together">
+                <img src="../images/au-hero.png" alt="Dog and cat together">
             </div>
 
         </section>
@@ -74,7 +71,7 @@
 
                 <div class="mission-block">
                     <div class="mission-icon">
-                        <img src="images/mission.png" alt="Mission">
+                        <img src="../images/mission.png" alt="Mission">
                     </div>
 
                     <div class="mission-text">
@@ -94,7 +91,7 @@
 
                     <span></span>
                     <div class="mission-center-paw">
-                        <img src="images/pawprint.png" alt="">
+                        <img src="../images/pawprint.png" alt="">
                     </div>
                     <span></span>
 
@@ -102,7 +99,7 @@
 
                 <div class="vision-block">
                     <div class="vision-icon">
-                        <img src="images/vision.png" alt="Vision">
+                        <img src="../images/vision.png" alt="Vision">
                     </div>
 
                     <div class="vision-text">
@@ -120,7 +117,7 @@
 
         <section class="values-section">
 
-            <img src="images/pawprint.png" alt="" class="values-pawprint">
+            <img src="../images/pawprint.png" alt="" class="values-pawprint">
 
             <div class="values-container">
 
@@ -132,7 +129,7 @@
                 <div class="values-list">
                     <div class="value-item">
                         <div class="value-icon quality-icon">
-                            <img src="images/shield-ico.png" alt="Quality First">
+                            <img src="../images/shield-ico.png" alt="Quality First">
                         </div>
                         <h3>Quality First</h3>
                         <p>
@@ -143,7 +140,7 @@
 
                     <div class="value-item">
                         <div class="value-icon love-icon">
-                            <img src="images/heart-ico.png" alt="Made with Love">
+                            <img src="../images/heart-ico.png" alt="Made with Love">
                         </div>
                         <h3>Made with Love</h3>
                         <p>
@@ -154,7 +151,7 @@
 
                     <div class="value-item">
                         <div class="value-icon parents-icon">
-                            <img src="images/people-ico.png" alt="For Pet Parents">
+                            <img src="../images/people-ico.png" alt="For Pet Parents">
                         </div>
                         <h3>For Pet Parents</h3>
                         <p>
@@ -165,7 +162,7 @@
 
                     <div class="value-item">
                         <div class="value-icon happy-icon">
-                            <img src="images/cat-ico.png" alt="Happy and Healthy Pets">
+                            <img src="../images/cat-ico.png" alt="Happy and Healthy Pets">
                         </div>
                         <h3>Happy & Healthy Pets</h3>
                         <p>
@@ -176,7 +173,7 @@
 
                     <div class="value-item">
                         <div class="value-icon trust-icon">
-                            <img src="images/leaf-ico.png" alt="Trust and Integrity">
+                            <img src="../images/leaf-ico.png" alt="Trust and Integrity">
                         </div>
                         <h3>Trust & Integrity</h3>
                         <p>
@@ -191,7 +188,7 @@
         <section class="story">
 
             <div class="story-image">
-                <img src="images/girldog2.png" alt="Girl with her dog">
+                <img src="../images/girldog2.png" alt="Girl with her dog">
             </div>
 
             <div class="story-content">
@@ -215,7 +212,7 @@
             <div class="footer-container">
                 <div class="footer-brand">
 
-                    <img src="images/logo-white.png" alt="Pawprint" class="footer-logo">
+                    <img src="../images/logo-white.png" alt="Pawprint" class="footer-logo">
                     <p>
                         Quality pet food, toys, and accessories<br>
                         made for happy pets and happier<br>
@@ -223,36 +220,33 @@
                     </p>
 
                     <div class="footer-socials">
-                        <a href="#" aria-label="YouTube">
-                            <img src="images/yt-ico.png" alt="YouTube">
+                        <a href="https://youtube.com" aria-label="YouTube">
+                            <img src="../images/yt-ico.png" alt="YouTube">
                         </a>
-                        <a href="#" aria-label="Facebook">
-                            <img src="images/fb-ico.png" alt="Facebook">
+                        <a href="https://facebook.com" aria-label="Facebook">
+                            <img src="../images/fb-ico.png" alt="Facebook">
                         </a>
-                        <a href="#" aria-label="Instagram">
-                            <img src="images/ig-ico.png" alt="Instagram">
+                        <a href="https://instagram.com" aria-label="Instagram">
+                            <img src="../images/ig-ico.png" alt="Instagram">
                         </a>
-                        <a href="#" aria-label="TikTok">
-                            <img src="images/tk-ico.png" alt="TikTok">
+                        <a href="https://tiktok.com" aria-label="TikTok">
+                            <img src="../images/tk-ico.png" alt="TikTok">
                         </a>
                     </div>
                 </div>
 
                 <div class="footer-column">
                     <h3>Quick Links</h3>
-                    <a href="shop.php">Shop</a>
-                    <a href="about-us.php">About Us</a>
-                    <a href="contact.php">Contact Us</a>
-                    <a href="#">FAQs</a>
+                    <a href="../shop/shop.php">Shop</a>
+                    <a href="../about us/about-us.php">About Us</a>
+                    <a href="../contact us/contact.php">Contact Us</a>
                 </div>
 
                 <div class="footer-column">
                     <h3>Customer Care</h3>
-                    <a href="#">My Account</a>
-                    <a href="#">Track Order</a>
-                    <a href="#">Shipping & Returns</a>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Privacy Policy</a>
+                    <a href="../account/account.php">My Account</a>
+                    <a href="../terms&privacy.php">Terms & Conditions</a>
+                    <a href="../terms&privacy.php">Privacy Policy</a>
                 </div>
 
                 <div class="footer-newsletter">
@@ -270,7 +264,7 @@
                     </form>
                 </div>
             </div>
-            <img src="images/pawprint-brown.png" alt="" class="footer-paw">
+            <img src="../images/pawprint-brown.png" alt="" class="footer-paw">
 
         </footer>
 
