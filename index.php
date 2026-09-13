@@ -170,7 +170,7 @@
                         <p class="product-price">₱199.00</p>
 
                         <form method="POST" action="shop/add-to-cart.php" class="bestseller-cart-form">
-                            <input type="hidden" name="product_id" value="3">
+                            <input type="hidden" name="product_id" value="4">
                             <input type="hidden" name="quantity" value="1">
 
                             <button type="submit" class="add-cart">

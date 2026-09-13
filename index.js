@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
             button.disabled = true;
             button.textContent = "Adding...";
 
-            fetch("add-to-cart.php", {
+            fetch("shop/add-to-cart.php", {
                 method: "POST",
                 body: formData
             })
