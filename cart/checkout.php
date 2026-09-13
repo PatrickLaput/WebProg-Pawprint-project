@@ -404,7 +404,7 @@ $stmt->close();
                                 </div>
 
                                 <a
-                                    href="../payment method/payment-methods.php"
+                                    href="../payment method/payment-method.php"
                                     class="change-link"
                                 >
                                     Change Payment Method
