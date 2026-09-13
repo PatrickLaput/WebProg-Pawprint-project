@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fcf5eb;
+    color: #4a2c1a;
+}
+
+/* Header */
+.admin-header {
+    background: #4a2c1a;
+    color: white;
+    padding: 22px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.admin-header a {
+    background: #e9783a;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 7px;
+    transition: background 0.2s ease;
+}
+
+.admin-header a:hover {
+    background: #c85d2b;
+}
+
+/* Main content */
+.admin-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 45px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Dashboard cards */
+.admin-card {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(74, 44, 26, 0.12);
+}
+
+.admin-card h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+/* Buttons */
+.admin-button {
+    display: inline-block;
+    background: #e9783a;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.admin-button:hover {
+    background: #c85d2b;
+}

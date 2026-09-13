@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fcf5eb;
+    color: #4a2c1a;
+}
+
+header {
+    background: #4a2c1a;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    background: #e9783a;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1500px;
+    margin: 35px auto;
+}
+
+.message,
+.error {
+    padding: 14px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.message {
+    background: #d9f4dc;
+    color: #216b2a;
+}
+
+.error {
+    background: #ffe0dc;
+    color: #9b261c;
+}
+
+.review-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.review-card h2 {
+    margin-top: 0;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 950px;
+}
+
+th,
+td {
+    padding: 14px;
+    border-bottom: 1px solid #eadfd5;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #f4e5d5;
+}
+
+.customer-name {
+    font-weight: bold;
+}
+
+.customer-email {
+    color: #75685e;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.product-name {
+    font-weight: bold;
+}
+
+.rating {
+    color: #e9783a;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.comment {
+    max-width: 350px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.date {
+    white-space: nowrap;
+    color: #75685e;
+    font-size: 13px;
+}
+
+.delete-button {
+    border: none;
+    background: #b52d25;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background: #8e211c;
+}
+
+.empty {
+    text-align: center;
+    padding: 30px;
+    color: #75685e;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

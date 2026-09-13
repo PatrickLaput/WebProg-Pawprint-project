@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fcf5eb;
+    color: #4a2c1a;
+}
+
+header {
+    background: #4a2c1a;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    background: #e9783a;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1500px;
+    margin: 35px auto;
+}
+
+.message,
+.error {
+    padding: 14px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.message {
+    background: #d9f4dc;
+    color: #216b2a;
+}
+
+.error {
+    background: #ffe0dc;
+    color: #9b261c;
+}
+
+.form-card,
+.table-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+.form-card h2,
+.table-card h2 {
+    margin-top: 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d8c8b9;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button,
+.cancel-button {
+    border: none;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.save-button {
+    background: #e9783a;
+    color: white;
+}
+
+.cancel-button {
+    background: #ddd;
+    color: #333;
+}
+
+.edit-button {
+    background: #4a2c1a;
+    color: white;
+}
+
+.delete-button {
+    background: #b52d25;
+    color: white;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 950px;
+}
+
+th,
+td {
+    padding: 14px;
+    border-bottom: 1px solid #eadfd5;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background: #f4e5d5;
+}
+
+.product-image {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.empty {
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 700px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
