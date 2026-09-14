@@ -323,9 +323,6 @@ function filter_url($page_number, $sort)
                 </nav>
 
                 <div class="nav-icons">
-                    <a href="#" class="search-toggle" aria-label="Search">
-                        <img src="../images/search.png" alt="search">
-                    </a>
                     <a href="../cart/cart.php">
                         <img src="../images/cart.png" alt="Cart">
                     </a>
@@ -586,83 +583,73 @@ function filter_url($page_number, $sort)
                         </div>
 
 
-                        <!-- SORT -->
+                        <!-- SORT AND SEARCH -->
 
-                        <form method="GET"
-                            action="shop.php">
+                        <div class="products-actions">
 
-                            <?php foreach ($categories as $category): ?>
+                            <form method="GET" action="shop.php" class="sort-form">
+
+                                <?php foreach ($categories as $category): ?>
+                                    <input
+                                        type="hidden"
+                                        name="category[]"
+                                        value="<?php echo htmlspecialchars($category); ?>"
+                                    >
+                                <?php endforeach; ?>
+
+                                <?php foreach ($pet_types as $pet): ?>
+                                    <input
+                                        type="hidden"
+                                        name="pet_type[]"
+                                        value="<?php echo htmlspecialchars($pet); ?>"
+                                    >
+                                <?php endforeach; ?>
 
                                 <input
                                     type="hidden"
-                                    name="category[]"
-                                    value="<?php echo htmlspecialchars($category); ?>"
+                                    name="min_price"
+                                    value="<?php echo $min_price; ?>"
                                 >
-
-                            <?php endforeach; ?>
-
-
-                            <?php foreach ($pet_types as $pet): ?>
 
                                 <input
                                     type="hidden"
-                                    name="pet_type[]"
-                                    value="<?php echo htmlspecialchars($pet); ?>"
+                                    name="max_price"
+                                    value="<?php echo $max_price; ?>"
                                 >
 
-                            <?php endforeach; ?>
+                                <select
+                                    class="sort-select"
+                                    name="sort"
+                                    onchange="this.form.submit()"
+                                >
+                                    <option value="best" <?php echo $sort === "best" ? "selected" : ""; ?>>
+                                        Sort by: Best Selling
+                                    </option>
 
+                                    <option value="price_low" <?php echo $sort === "price_low" ? "selected" : ""; ?>>
+                                        Price: Low to High
+                                    </option>
 
-                            <input
-                                type="hidden"
-                                name="min_price"
-                                value="<?php echo $min_price; ?>"
+                                    <option value="price_high" <?php echo $sort === "price_high" ? "selected" : ""; ?>>
+                                        Price: High to Low
+                                    </option>
+
+                                    <option value="newest" <?php echo $sort === "newest" ? "selected" : ""; ?>>
+                                        Newest
+                                    </option>
+                                </select>
+
+                            </form>
+
+                            <button
+                                type="button"
+                                class="search-toggle"
+                                aria-label="Search"
                             >
+                                <img src="../images/search.png" alt="Search">
+                            </button>
 
-                            <input
-                                type="hidden"
-                                name="max_price"
-                                value="<?php echo $max_price; ?>"
-                            >
-
-
-                            <select
-                                class="sort-select"
-                                name="sort"
-                                onchange="this.form.submit()"
-                            >
-
-                                <option
-                                    value="best"
-                                    <?php echo $sort === "best" ? "selected" : ""; ?>
-                                >
-                                    Sort by: Best Selling
-                                </option>
-
-                                <option
-                                    value="price_low"
-                                    <?php echo $sort === "price_low" ? "selected" : ""; ?>
-                                >
-                                    Price: Low to High
-                                </option>
-
-                                <option
-                                    value="price_high"
-                                    <?php echo $sort === "price_high" ? "selected" : ""; ?>
-                                >
-                                    Price: High to Low
-                                </option>
-
-                                <option
-                                    value="newest"
-                                    <?php echo $sort === "newest" ? "selected" : ""; ?>
-                                >
-                                    Newest
-                                </option>
-
-                            </select>
-
-                        </form>
+                        </div>
 
                     </div>
 

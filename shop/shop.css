@@ -58,7 +58,7 @@
     font-weight: 610;
     color: var(--primary-color2);
     text-decoration: none;
-    padding: 2px 7;
+    padding: 2px 7px;
     transition: color 0.3s ease;
 }
 
@@ -625,6 +625,39 @@ body {
     outline: none;
 
     cursor: pointer;
+}
+
+.products-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.search-toggle {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.search-toggle img {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+    display: block;
+}
+
+.search-toggle:hover {
+    transform: translateY(-2px);
 }
 
 

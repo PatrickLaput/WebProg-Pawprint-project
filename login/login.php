@@ -43,11 +43,11 @@
 
                 <div class="login-card-header">
                     <img src="../images/pawprint.png" alt="Paw" class="login-paw">
-                    <h1>Sign In</h1>
+                    <h1>Log In</h1>
                     <p>Good to see you again!</p>
                 </div>
 
-                <form class="login-form" action="log-in.php" method="POST">
+                <form id="loginForm" class="login-form" action="log-in.php" method="POST">
                     <div class="login-input">
                         <input type="email" name="email" placeholder="Email Address">
                     </div>
@@ -66,6 +66,7 @@
                         </label>
                     </div>
 
+                    <p id="loginError" class="login-error"></p>
                     <button type="submit" class="signin-button">
                         Log In
                         <span>></span>

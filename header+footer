@@ -73,7 +73,7 @@ require_once __DIR__ .'/../auth.php';
     font-weight: 610;
     color: var(--primary-color2);
     text-decoration: none;
-    padding: 2px 7;
+    padding: 2px 7px;
     transition: color 0.3s ease;
 }
 
