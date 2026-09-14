@@ -323,11 +323,11 @@ function filter_url($page_number, $sort)
                 </nav>
 
                 <div class="nav-icons">
-                    <a href="../cart/cart.php">
-                        <img src="../images/cart.png" alt="Cart">
-                    </a>
                     <a href="#" class="search-toggle" aria-label="Search">
                         <img src="../images/search.png" alt="search">
+                    </a>
+                    <a href="../cart/cart.php">
+                        <img src="../images/cart.png" alt="Cart">
                     </a>
                     <a href="../account/account.php">
                         <img src="../images/acc.png" alt="Account">
