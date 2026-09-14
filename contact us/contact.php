@@ -1,3 +1,54 @@
+<?php
+require_once __DIR__ . "/../newsletter-subscribe.php";
+
+$success_message = "";
+$error_message = "";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    $full_name = trim($_POST["full_name"] ?? "");
+    $email = trim($_POST["email"] ?? "");
+    $phone = trim($_POST["phone"] ?? "");
+    $subject = trim($_POST["subject"] ?? "");
+    $message = trim($_POST["message"] ?? "");
+
+    if (
+        empty($full_name) ||
+        empty($email) ||
+        empty($subject) ||
+        empty($message)
+    ) {
+        $error_message = "Please complete all required fields.";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error_message = "Please enter a valid email address.";
+    } else {
+
+        $messages_folder = __DIR__ . "/messages";
+
+        if (!is_dir($messages_folder)) {
+            mkdir($messages_folder, 0755, true);
+        }
+
+        $message_data =
+            "Date: " . date("Y-m-d H:i:s") . PHP_EOL .
+            "Full Name: " . $full_name . PHP_EOL .
+            "Email: " . $email . PHP_EOL .
+            "Phone: " . $phone . PHP_EOL .
+            "Subject: " . $subject . PHP_EOL .
+            "Message: " . $message . PHP_EOL .
+            str_repeat("-", 60) . PHP_EOL;
+
+        $file_path = $messages_folder . "/contact-messages.txt";
+
+        if (file_put_contents($file_path, $message_data, FILE_APPEND | LOCK_EX)) {
+            $success_message = "Your message has been sent successfully.";
+        } else {
+            $error_message = "There was a problem sending your message.";
+        }
+    }
+}
+?>
+
 <DOCTYPE html>
 <html>
 
@@ -104,31 +155,66 @@
                         Fill out the form below and we'll get back to you as soon as possible.
                     </p>
 
-                    <form class="contact-form">
+                    <?php if (!empty($success_message)): ?>
+                        <p class="success-message">
+                            <?php echo htmlspecialchars($success_message); ?>
+                        </p>
+                    <?php endif; ?>
+
+                    <?php if (!empty($error_message)): ?>
+                        <p class="error-message">
+                            <?php echo htmlspecialchars($error_message); ?>
+                        </p>
+                    <?php endif; ?>
+
+                    <form class="contact-form" action="contact.php" method="POST">
+
                         <div class="form-row">
-                            <input type="text" placeholder="Full Name" required>
-                            <input type="email" placeholder="Email Address" required >
+                            <input
+                                type="text"
+                                name="full_name"
+                                placeholder="Full Name"
+                                required
+                            >
+
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Email Address"
+                                required
+                            >
                         </div>
-                        <input  type="tel" placeholder="Phone Number">
+
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="Phone Number"
+                        >
 
                         <div class="select-wrapper">
-                            <select required>
+                            <select name="subject" required>
                                 <option value="" selected disabled>
                                     Subject
                                 </option>
-                                <option value="order">Order Inquiry</option>
-                                <option value="product">Product Inquiry</option>
-                                <option value="support">Customer Support</option>
-                                <option value="other">Other</option>
+
+                                <option value="Order Inquiry">Order Inquiry</option>
+                                <option value="Product Inquiry">Product Inquiry</option>
+                                <option value="Customer Support">Customer Support</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
 
-                        <textarea placeholder="Message" required></textarea>
+                        <textarea
+                            name="message"
+                            placeholder="Message"
+                            required
+                        ></textarea>
 
                         <button type="submit">
                             <img src="../images/pawprint-white.png" alt="">
                             Send Message
                         </button>
+
                     </form>
                 </div>
 
@@ -346,9 +432,13 @@
                         Get updates on new products,<br>
                         exclusive deals, and pet care tips!
                     </p>
-                    <form class="subscribe-form">
-
-                        <input type="email" placeholder="Enter you email" required>
+                    <form class="subscribe-form" method="POST">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
                         <button type="submit">
                             Subscribe
                         </button>

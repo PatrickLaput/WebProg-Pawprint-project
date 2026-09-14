@@ -1,3 +1,7 @@
+<?php
+require_once __DIR__ . "/../newsletter-subscribe.php";
+?>
+
 <DOCTYPE html>
 <html>
 
@@ -128,9 +132,14 @@
                         Get updates on new products,<br>
                         exclusive deals, and pet care tips!
                     </p>
-                    <form class="subscribe-form">
+                    <form class="subscribe-form" method="POST">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
 
-                        <input type="email" placeholder="Enter you email" required>
                         <button type="submit">
                             Subscribe
                         </button>

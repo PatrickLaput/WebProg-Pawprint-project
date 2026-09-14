@@ -3,6 +3,7 @@
 
 require_once __DIR__ . '/../db.php';
 require_once __DIR__ .'/../auth.php';
+require_once __DIR__ . "/../newsletter-subscribe.php";
 
 $user_id = (int)$_SESSION["user_id"];
 
@@ -408,9 +409,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     Get updates on new products,<br>
                     exclusive deals, and pet care tips!
                 </p>
-                <form class="subscribe-form">
-
-                    <input type="email" placeholder="Enter you email" required>
+                <form class="subscribe-form" method="POST">
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required
+                    >
                     <button type="submit">
                         Subscribe
                     </button>

@@ -567,6 +567,24 @@
     background-color: var(--background-color);
 }
 
+.success-message {
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-family: "Montserrat";
+    border-radius: 8px;
+    background: #e4f5e8;
+    color: #216b36;
+}
+
+.error-message {
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-family: "Montserrat";
+    border-radius: 8px;
+    background: #fde8e8;
+    color: #a42626;
+}
+
 .contact-cta-container {
     position: relative;
     width: 100%;
