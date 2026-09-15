@@ -522,8 +522,8 @@ if (
         <div class="footer-column">
             <h3>Customer Care</h3>
             <a href="account.php">My Account</a>
-            <a href="../terms&privacy.php">Terms & Conditions</a>
-            <a href="../terms&privacy.php">Privacy Policy</a>
+            <a href="../terms&privacy/terms&privacy.php">Terms & Conditions</a>
+            <a href="../terms&privacy/terms&privacy.php">Privacy Policy</a>
         </div>
 
         <div class="footer-newsletter">
