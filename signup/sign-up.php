@@ -16,15 +16,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     if ($password === '') {
-        return "Password is required.";
+        die("Password is required.");
     }
 
     if (strlen($password) < 8) {
-        return "Password must be at least 8 characters.";
+        die("Password must be at least 8 characters.");
     }
 
     if (strlen($password) > 72) {
-        return "Password must not exceed 72 characters.";
+        die("Password must not exceed 72 characters.");
     }
 
     $check = $conn->prepare(
