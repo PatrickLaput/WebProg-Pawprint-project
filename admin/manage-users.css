@@ -1,0 +1,238 @@
+/* General page */
+body {
+    margin: 0;
+    background: #fcf5eb;
+    font-family: Arial, sans-serif;
+    color: #4a2c1a;
+}
+
+/* Header */
+.admin-header {
+    background: #4a2c1a;
+    color: white;
+    padding: 25px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.admin-header a {
+    background: #e9783a;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 7px;
+    transition: background 0.2s ease;
+}
+
+.admin-header a:hover {
+    background: #c85d2b;
+}
+
+.back-button {
+    background: #e9783a;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background: #d9652d;
+}
+
+/* Main content */
+.admin-container {
+    width: 100%;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Large centered box */
+.admin-card {
+    width: 100%;
+    max-width: 1250px;
+    background: white;
+    padding: 35px;
+    box-sizing: border-box;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+}
+
+.users-card h2 {
+    text-align: center;
+    margin: 0 0 30px;
+    font-size: 28px;
+    color: #4a2c1a;
+}
+
+/* Table wrapper */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Table */
+.users-table {
+    width: 100%;
+    min-width: 950px;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.users-table th {
+    background: #4a2c1a;
+    color: white;
+    padding: 16px 14px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.users-table td {
+    padding: 17px 14px;
+    border-bottom: 1px solid #e8ddd0;
+    white-space: nowrap;
+}
+
+.users-table tr:hover {
+    background: #fff7ef;
+}
+
+/* Buttons */
+.view-orders,
+.delete-button {
+    display: inline-block;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 13px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.view-orders {
+    background: #e9783a;
+    color: white;
+}
+
+.view-orders:hover {
+    background: #d9652d;
+}
+
+.delete-button {
+    background: #b83232;
+    color: white;
+}
+
+.delete-button:hover {
+    background: #922626;
+}
+
+.user-management-card {
+    width: 100%;
+    overflow: hidden;
+}
+
+.user-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+.user-table th,
+.user-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e8ddd0;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.user-table th {
+    background-color: #4a2c1a;
+    color: #ffffff;
+}
+
+.user-table tr:hover {
+    background-color: #fcf5eb;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.view-orders-button,
+.delete-user-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.view-orders-button {
+    background-color: #e9783a;
+    color: #ffffff;
+}
+
+.view-orders-button:hover {
+    background-color: #d9652c;
+}
+
+.delete-user-button {
+    background-color: #b3261e;
+    color: #ffffff;
+}
+
+.delete-user-button:hover {
+    background-color: #8f1d18;
+}
+
+.current-account {
+    color: #75685e;
+    font-size: 12px;
+}
+
+/* Smaller screens */
+@media (max-width: 768px) {
+    .admin-header {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .admin-header h1 {
+        font-size: 24px;
+    }
+
+    .admin-container {
+        padding: 25px 12px;
+    }
+
+    .users-card {
+        padding: 20px;
+    }
+}

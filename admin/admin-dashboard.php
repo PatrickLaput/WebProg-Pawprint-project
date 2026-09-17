@@ -45,7 +45,16 @@ require_once "admin-auth.php";
         <a href="manage-reviews.php" class="admin-button">
             Manage Reviews
         </a>
+        
     </section>
+
+    <section class="admin-card">
+    <h2>User Management</h2>
+
+    <a href="manage-users.php" class="admin-button">
+        View Users
+    </a>
+</section>
 
 </main>
 

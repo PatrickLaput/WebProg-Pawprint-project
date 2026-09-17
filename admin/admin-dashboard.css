@@ -44,7 +44,7 @@ body {
     max-width: 1000px;
     margin: 45px auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1fr, 2fr);
     gap: 25px;
 }
 
@@ -78,3 +78,4 @@ body {
 .admin-button:hover {
     background: #c85d2b;
 }
+

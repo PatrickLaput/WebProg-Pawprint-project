@@ -25,9 +25,10 @@ if ($email === "" || $password === "") {
 }
 
 $stmt = $conn->prepare(
-    "SELECT userId, first_name, last_name, email, password
+    "SELECT userId, first_name, last_name, email, password, is_admin
      FROM users
-     WHERE email = ?"
+     WHERE email = ?
+     LIMIT 1"
 );
 
 if (!$stmt) {
@@ -53,10 +54,17 @@ if ($result->num_rows === 1) {
         $_SESSION["first_name"] = $user["first_name"];
         $_SESSION["last_name"] = $user["last_name"];
         $_SESSION["email"] = $user["email"];
+        $_SESSION["is_admin"] = (int) $user["is_admin"];
+
+        if ((int) $user["is_admin"] === 1) {
+            $redirect = "../admin/admin-dashboard.php";
+        } else {
+            $redirect = "../account/account.php";
+        }
 
         echo json_encode([
             "success" => true,
-            "redirect" => "../account/account.php"
+            "redirect" => $redirect
         ]);
 
         $stmt->close();
