@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title><?php echo $page_title; ?> | Pawprint</title>
+    <title>Pawprint</title>
 
     <link rel="stylesheet" href="terms&privacy.css">
 
@@ -15,7 +15,7 @@
 
     <main class="policy-page">
 
-          <a href="index.php">Back to home</a>
+          <a href="../index.php">Back to home</a>
 
           <section class="policy-hero">
                <h1>Terms of Service & Privacy Policy</h1>
