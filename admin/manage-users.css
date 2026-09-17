@@ -217,6 +217,81 @@ body {
     font-size: 12px;
 }
 
+.user-email {
+    margin: 0 0 8px;
+}
+
+.no-orders-message {
+    display: block;
+    margin-top: 20px;
+    color: #75685e;
+    font-size: 16px;
+}
+
+.delivered-button {
+    background: #4a8f45;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.delivered-button:hover {
+    background: #367337;
+}
+
+.delivered-label {
+    display: inline-block;
+    background: #d9f0d5;
+    color: #286b2c;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status-delivered {
+    color: #4a8f45;
+}
+
+.status-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-select {
+    min-width: 125px;
+    padding: 9px 10px;
+    border: 1px solid #d8c5b5;
+    border-radius: 6px;
+    background: white;
+    color: #4a2c1a;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.update-status-button {
+    padding: 9px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #e9783a;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.update-status-button:hover {
+    background: #d9652d;
+}
 /* Smaller screens */
 @media (max-width: 768px) {
     .admin-header {

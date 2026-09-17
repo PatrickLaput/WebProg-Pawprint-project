@@ -19,7 +19,6 @@ require_once "admin-auth.php";
 <header class="admin-header">
 
     <h1>Pawprint Admin Dashboard</h1>
-    <a href="../shop/shop.php">Back to Shop</a>
 
     <a href="admin-logout.php" class="account-nav-item">
         <span class="nav-icon">↪</span>

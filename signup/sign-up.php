@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($stmt->execute()) {
 
         // Account successfully created
-        header("Location: ../account/account.php?signup=success");
+        header("Location: ../login/login.php?signup=success");
         exit();
 
     } else {
