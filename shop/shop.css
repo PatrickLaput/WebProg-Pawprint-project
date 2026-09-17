@@ -1100,11 +1100,11 @@ body {
 }
 
 #min-price {
-    z-index: 1;
+    z-index: 3;
 }
 
 #max-price {
-    z-index: 2;
+    z-index: 3;
 }
 
 /* Firefox */
@@ -1204,6 +1204,100 @@ body {
     width: 100%;
 }
 
+/* Slider container */
+.price-slider {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    margin-top: 5px;
+    background: transparent;
+}
+
+/* Visible base track */
+.price-slider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #ddd2c5;
+    border-radius: 10px;
+    transform: translateY(-50%);
+}
+
+/* Visible selected-price track */
+.price-progress {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* Range inputs */
+.price-slider input[type="range"] {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    margin: 0;
+    transform: translateY(-50%);
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    pointer-events: none;
+}
+
+/* Make the input tracks invisible */
+.price-slider input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+    background: transparent;
+}
+
+.price-slider input[type="range"]::-moz-range-track {
+    height: 6px;
+    background: transparent;
+}
+
+/* Minimum slider stays above the maximum slider */
+#min-price {
+    z-index: 3;
+}
+
+/* Maximum slider stays below the minimum slider */
+#max-price {
+    z-index: 2;
+}
+
+/* Slider thumbs */
+.price-slider input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-top: -7px;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    background-color: #ffffff;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.price-slider input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    background-color: #ffffff;
+    pointer-events: auto;
+    cursor: pointer;
+}
 
 /* footer */
 .footer {
