@@ -1,0 +1,80 @@
+/* Admin Login Page */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcf5eb;
+    font-family: Arial, sans-serif;
+}
+
+/* Login Container */
+.admin-login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 35px;
+    background-color: #ffffff;
+    border: 1px solid #e8ddd0;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(74, 44, 26, 0.12);
+}
+
+/* Heading */
+.admin-login-container h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #4a2c1a;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #4a2c1a;
+    font-weight: bold;
+}
+
+/* Inputs */
+.form-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #d8c8b8;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #e9783a;
+}
+
+/* Login Button */
+.login-button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e9783a;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #4a2c1a;
+}
+
+/* Error Message */
+.error-message {
+    margin-bottom: 15px;
+    color: #b3261e;
+    text-align: center;
+    font-size: 14px;
+}
