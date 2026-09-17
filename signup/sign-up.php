@@ -11,12 +11,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $confirm_password = $_POST["confirm_password"];
     $birthdate = $_POST["birthdate"];
 
-    // Check if passwords match
     if ($password !== $confirm_password) {
         die("Passwords do not match.");
     }
 
-    // Check if email already exists
+    if ($password === '') {
+        return "Password is required.";
+    }
+
+    if (strlen($password) < 8) {
+        return "Password must be at least 8 characters.";
+    }
+
+    if (strlen($password) > 72) {
+        return "Password must not exceed 72 characters.";
+    }
+
     $check = $conn->prepare(
         "SELECT userID FROM users WHERE email = ?"
     );
@@ -56,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($stmt->execute()) {
 
         // Account successfully created
-        header("Location: signup.php?signup=success");
+        header("Location: ../account/account.php?signup=success");
         exit();
 
     } else {
